@@ -1,0 +1,14 @@
+/*
+Custom Css
+*/
+
+/*Ajustar las imagenes del carrusel*/
+.carousel-inner img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.navbar-brand{
+    color: green !important;
+}

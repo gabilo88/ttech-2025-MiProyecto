@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Módulo de reclamaciones</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="images/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/templatemo.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+
+</head>
+
+<body>
+
+    <!-- Contenedor para cargar la barra de menú usando JavaScript -->
+    <div id="menu"></div>
+    <!-- Contenido de la página - Inicio -->
+
+    <div class="container py-5 shadow">
+        <div class="row py-5">
+            <h2 class="h5 mt-4 text-center">Su compra total es: $<b id="etiqueta_total">0</b> </h2>
+            <form id="contactForm" class="col-md-9-auto" method="post" role="form">
+
+                <div class="mb-3">
+                    <label for="inputname">Nombre del titular</label>
+                    <input type="text" class="form-control mt-1" id="name" name="name" placeholder="Nombre como aparece escrito en la tarjeta">
+                </div>
+
+                <div class="mb-3">
+                    <label for="card number">Número de tarjeta</label>
+                    <input type="text" class="form-control mt-1" id="number" name="number" placeholder="xxxx xxxx xxxx xxxx">
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-6 mb-3">
+                        
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <!-- Contenido de la página - Final -->
+    <!-- Contenedor para cargar el pie de página usando JavaScript -->
+    <div id="pie"></div>
+
+
+
+    <!-- Start Script -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/templatemo.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- End Script -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            cargarFragmento("menu", "menu.html");
+            cargarFragmento("pie", "pie.html");
+        });
+    </script>
+</body>
+</html>
