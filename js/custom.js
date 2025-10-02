@@ -10,28 +10,42 @@ function cargarFragmento(idElemento, archivo) {
 }
 
 
+// Validación para el formulario de contacto
+const formContacto = document.getElementById('formularioContacto');
+if (formContacto) {
+    formContacto.addEventListener('submit', function(event) {
+        event.preventDefault();
 
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+        const asunto = document.getElementById('asunto').value;
+        const mensaje = document.getElementById('mensaje').value;
 
-// Capturar el evento submit del formulario
-document.getElementById('formularioContacto').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita el envío automático del formulario
+        if (!nombre || !email || !asunto || !mensaje) {
+            alert('Por favor, completa todos los campos.');
+            return;
+        }
 
-    // Obtener los datos del formulario
-    const nombre = document.getElementById('nombre').value;
-    const email = document.getElementById('email').value;
-    const asunto = document.getElementById('asunto').value;
-    const mensaje = document.getElementById('mensaje').value;
+        alert(`Formulario enviado con éxito:\nNombre: ${nombre}\nEmail: ${email}\nAsunto: ${asunto}\nMensaje: ${mensaje}`);
+    });
+}
 
-    // Validar los datos (opcional)
-    if (!nombre || !email || !asunto || !mensaje ) {
-        alert('Por favor, completa todos los campos.');
-        return;
-    }
+// Validación para el formulario de pago
+const formPagar = document.getElementById('formularioPagar');
+if (formPagar) {
+    formPagar.addEventListener('submit', function(event) {
+        event.preventDefault();
 
-    // Enviar el formulario 
-    alert(`Formulario enviado con éxito: 
-           Nombre: ${nombre}, 
-           Email: ${email}, 
-           Asunto: ${asunto}, 
-           Mensaje: ${mensaje}`);
-});
+        const nombre = document.getElementById('name').value;
+        const tarjeta = document.getElementById('number').value;
+        const fechaVencimiento = document.getElementById('dueDate').value;
+        const cvv = document.getElementById('cvvnumber').value;
+
+        if (!nombre || !tarjeta || !fechaVencimiento || !cvv) {
+            alert('Por favor, completa todos los campos.');
+            return;
+        }
+
+        alert(`Señor(a) ${nombre}, pago realizado con éxito.`);
+    });
+}

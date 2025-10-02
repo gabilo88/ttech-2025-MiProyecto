@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="css/fontawesome.min.css">
 
+    <script src="basedatos/consultas.js"></script>
+
 </head>
 
 <body>
@@ -25,10 +27,20 @@
     <div id="menu"></div>
     <!-- Contenido de la página - Inicio -->
 
+    <section class="bg-success py-2">
+        <div class="container">
+            <div class="row align-items-center py-2">
+                <div class="col-md-12 text-white text-center">
+                    <h1>Su compra total es: $<b id="etiqueta_total">0</b></h1>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <!--Formulario de pago del carrito de compras-->
     <div class="container py-5 shadow">
         <div class="row py-5">
-            <h2 class="h5 mt-4 text-center">Su compra total es: $<b id="etiqueta_total">0</b> </h2>
-            <form id="contactForm" class="col-md-9-auto" method="post" role="form">
+            <form id="formularioPagar" class="col-md-9-auto" method="post" role="form">
 
                 <div class="mb-3">
                     <label for="inputname">Nombre del titular</label>
@@ -42,16 +54,37 @@
 
                 <div class="row">
                     <div class="form-group col-md-6 mb-3">
-                        
-
+                        <label for="dueDate">Fecha de vencimiento</label>
+                        <input type="date" class="form-control mt-1" id="dueDate" name="dueDate" placeholder="MM/AA">
                     </div>
-
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="cvvnumber">CVV</label>
+                        <input type="text" class="form-control mt-1" id="cvvnumber" name="cvvnumber" placeholder="000">
+                    </div>
                 </div>
 
+                <div class="row">
+                    <div class="col text-end mt-2">
+                        <button type="submit" class="btn btn-success btn-lg px-3">Pagar</button>
+                    </div>
+                </div>
             </form>
-
         </div>
     </div>
+    <!--Fin fomrulario para pagar compras del carrito-->
+
+    <!--Script que permite obtener el valor total del carrito de compras y traerlo a la página de pago-->
+    <script>
+            carrito = obtenerCarrito();
+            let etiqueta_total = document.getElementById("etiqueta_total");
+            let total = 0;
+
+            carrito.forEach(element => {
+                total += element.precio;
+            });
+            etiqueta_total.innerText = total.toLocaleString("es-CO");
+    </script>
+    <!--Fin Script-->
 
     <!-- Contenido de la página - Final -->
     <!-- Contenedor para cargar el pie de página usando JavaScript -->
