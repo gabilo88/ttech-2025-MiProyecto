@@ -5,7 +5,7 @@
 const elementos_carrusel = [
     {nombre: "Plan básico protección 60 años", 
         descripcion:"Plan que permite ahorrar para complementar tu pensión",
-        imagen:"images/planbasicoahorro.jpg" },
+        imagen:"images/PlanBasico.jpg" },
     {nombre: "Plan Educativo", 
         descripcion:"Plan adicional que permite asegurar el futuro de quienes amas",
         imagen:"images/familia.jpg" },
@@ -45,7 +45,7 @@ const lista_productos = [
         imagen:"images/productopb60.jpg",
         precio: 80000,
         clasificacion: 4, 
-        contenido: ["cobertura a","cobertura b","cobertura c","cobertura d"]    
+        contenido: ["Perseverancia 60 años","Muerte","Muerte accidental","Incapacidad temporal"]    
     },
     {   codigo: "1012",
         nombre: "Plan básico 70 años", 
@@ -54,16 +54,16 @@ const lista_productos = [
         imagen:"images/productopb70.jpg",
         precio: 80000,
         clasificacion: 4,
-        contenido: ["cobertura a","cobertura b","cobertura c","cobertura d"] 
+        contenido: ["Perseverancia 70 años","Muerte","Muerte accidental","Incapacidad temporal"]   
     },
     {   codigo: "2011",
         nombre: "Solvencia", 
         descripcion:"Plan adicional que permite ahorrar a corto plazo",
         codigo_categoria: "201",
-        imagen:"images/productosolvencia2.jpg",
+        imagen:"images/productosolvencia3.png",
         precio: 30000,
         clasificacion: 5,
-        contenido: ["cobertura a","cobertura b","cobertura c","cobertura d"] 
+        contenido: ["Perseverancia corto plazo","Muerte asociado","Muerte accidental"] 
     },
     {   codigo: "2012",
         nombre: "Plan educativo", 
@@ -72,7 +72,7 @@ const lista_productos = [
         imagen:"images/productoeducativo.jpg",
         precio: 60000,
         clasificacion: 5,
-        contenido: ["cobertura a","cobertura b","cobertura c","cobertura d"] 
+        contenido: ["Perseveancia mediano plazo","Persevernacia corto plazo","Canasta hijos","Amparo salud"] 
     },
     {   codigo: "2013",
         nombre: "Mejora incapacidad temporal", 
@@ -81,7 +81,7 @@ const lista_productos = [
         imagen:"images/productoincapacidad.jpg",
         precio: 60000,
         clasificacion: 5,
-        contenido: ["cobertura a","cobertura b","cobertura c","cobertura d"] 
+        contenido: ["Incapacidad temporal"] 
     },
     {   codigo: "3011",
         nombre: "Plan complementario básico", 
@@ -90,7 +90,7 @@ const lista_productos = [
         imagen:"images/productocomplementario.png",
         precio: 20000,
         clasificacion: 5,
-         contenido: ["cobertura a","cobertura b","cobertura c","cobertura d"] 
+         contenido: ["Medicamentos","Desempleo","Disminución de ingresos","Asistencia legal","Asistencia jurídica"] 
     },
     {   codigo: "4011",
         nombre: "Plan funerario familiares directos", 
@@ -99,7 +99,7 @@ const lista_productos = [
         imagen:"images/productofunerariofamiliar2.jpg",
         precio: 17000,
         clasificacion: 4,
-         contenido: ["cobertura a","cobertura b","cobertura c","cobertura d"] 
+         contenido: ["5 Servicios de inhumación","Auxilio funerario 3 SMMLV"] 
     },
     {   codigo: "4012",
         nombre: "Plan funerario adicional", 
@@ -108,7 +108,7 @@ const lista_productos = [
         imagen:"images/productofunerariofamiliar3.jpg",
         precio: 25000,
         clasificacion: 4,
-         contenido: ["cobertura a","cobertura b","cobertura c","cobertura d"] 
+         contenido: ["2 Servicios de inhumación","Auxilio funerario 3 SMMLV"] 
     },
     {   codigo: "4013",
         nombre: "Plan funerario asociado", 
@@ -117,7 +117,7 @@ const lista_productos = [
         imagen:"images/productofunerarioaociado.jpg",
         precio: 9000,
         clasificacion: 4,
-        contenido: ["cobertura a","cobertura b","cobertura c","cobertura d"] 
+        contenido: ["1 Servicio de inhumación","Auxilio funerario 10 SMMLV"]
     }    
 ]
 

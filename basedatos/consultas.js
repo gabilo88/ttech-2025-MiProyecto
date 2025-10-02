@@ -49,7 +49,7 @@ function mostrarCarrito() {
                 <div class="d-flex justify-content-between align-items-center p-2 border-bottom border-dark">
                     <div class="row">
                         <p class="my-0">${elemento.nombre}</p>
-                        <small>${elemento.precio}</small>
+                        <small>$${elemento.precio.toLocaleString("es-CO")}</small>
                     </div>
                     <a class="btn bg-warning text-decoration-none text-dark" href="#"
                         onclick="eliminarProductoServicio('${posicion}')" >
@@ -60,7 +60,7 @@ function mostrarCarrito() {
         costoTotal = costoTotal + elemento.precio;
     });
     let etiqueta_total= document.getElementById("etiqueta_total");
-    etiqueta_total.innerText = costoTotal;
+    etiqueta_total.innerText = costoTotal.toLocaleString("es-CO");
 
 }
 
@@ -89,6 +89,7 @@ function agregarProductoServicio(producto,mostrar=true) {
 
 //Funcion para eliminar productio del carrito
 function eliminarProductoServicio(posicion) {
+    let carrito = obtenerCarrito();
     //carrito = carrito.filter (elemento => elemento.codigo !== codigo);
     carrito.splice(posicion,1);
     // Almacenar la información del carrito de compras en el local storage

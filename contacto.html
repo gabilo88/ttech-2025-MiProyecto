@@ -24,52 +24,63 @@
     <!-- Contenedor para cargar la barra de menú usando JavaScript -->
     <div id="menu"></div>
     <!-- Contenido de la página - Inicio -->
+    <section class="bg-success py-2">
+        <div class="container">
+            <div class="row align-items-center py-2">
+                <div class="col-md-12 text-white text-center">
+                    <h1>¿Cómo podemos ayudarte?</h1>
+                    <p> ¡Ven y visítanos... Te estamos esperando!
+                    <br> Déjanos tus comentarios, te responderemos lo más pronto posible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Start Contact -->
-    <div class="container py-5">
-        <div class="row py-5">
-            <form id="formularioContacto" class="col-md-9 m-auto" method="post" role="form">
-                <div class="row">
-                    <div class="form-group col-md-6 mb-3">
-                        <label for="inputname">Nombre completo</label>
-                        <input type="text" class="form-control mt-1" id="nombre" name="name" placeholder="Nombre completo">
+    <div class="container py-4">
+        <div class="row py-4 align-items-center">
+            <!-- Start Map -->
+            <div class="col-md-6 mb-4 mb-md-0">  
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.7788628799813!2d-76.53883782521564!3d3.
+                    4040390965705543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a14d4ddfff85%3A0x1635dc528bd39afd!2s
+                    Coomeva%20Sede%20Nacional!5e0!3m2!1ses!2sco!4v1758588165252!5m2!1ses!2sco" 
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div><!--Para el mapa Div-->
+            <!-- End Map -->
+
+            <div class="col-md-6">
+                <form id="formularioContacto" class="col-md-9 m-auto" method="post" role="form">
+                    <div class="row">
+                        <div class="form-group col-md-6 mb-3">
+                            <label for="inputname">Nombre completo</label>
+                            <input type="text" class="form-control mt-1" id="nombre" name="name" placeholder="Nombre completo">
+                        </div>
+                        <div class="form-group col-md-6 mb-3">
+                            <label for="inputemail">Correo electrónico</label>
+                            <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Correo electrónico">
+                        </div>
                     </div>
-                    <div class="form-group col-md-6 mb-3">
-                        <label for="inputemail">Correo electrónico</label>
-                        <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Correo electrónico">
+                    <div class="mb-3">
+                        <label for="inputsubject">Asunto</label>
+                        <input type="text" class="form-control mt-1" id="asunto" name="subject" placeholder="Asunto">
                     </div>
-                </div>
-                <div class="mb-3">
-                    <label for="inputsubject">Asunto</label>
-                    <input type="text" class="form-control mt-1" id="asunto" name="subject" placeholder="Asunto">
-                </div>
-                <div class="mb-3">
-                    <label for="inputmessage">Mensaje</label>
-                    <textarea class="form-control mt-1" id="mensaje" name="message" placeholder="Mensaje" rows="8"></textarea>
-                </div>
-                <div class="row">
-                    <div class="col text-end mt-2">
-                        <button type="submit" class="btn btn-success btn-lg px-3">Enviar</button>
+                    <div class="mb-3">
+                        <label for="inputmessage">Mensaje</label>
+                        <textarea class="form-control mt-1" id="mensaje" name="message" placeholder="Mensaje" rows="8"></textarea>
                     </div>
-                </div>
-            </form>
-        </div>
-    </div>
-    <!-- End Contact -->
-
-    <!-- Start Map -->
-    <div class="container pt-5">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.7788628799813!2d-76.53883782521564!3d3.
-            4040390965705543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a14d4ddfff85%3A0x1635dc528bd39afd!2s
-            Coomeva%20Sede%20Nacional!5e0!3m2!1ses!2sco!4v1758588165252!5m2!1ses!2sco" 
-            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </div>
-
-
-    <!-- End Map -->
-
+                    <div class="row">
+                        <div class="col text-end mt-2">
+                            <button type="submit" class="btn btn-success btn-lg px-3">Enviar</button>
+                        </div>
+                    </div>
+                </form>   <!-- End Contact -->
+            </div>
+        </div><!--Fin div class row-->
+    </div><!--Fin div conteiner-->
+ 
 
     <!-- Contenido de la página - Final -->
     <!-- Contenedor para cargar el pie de página usando JavaScript -->
